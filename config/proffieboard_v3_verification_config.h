@@ -18,18 +18,13 @@ const unsigned int maxLedsPerStrip = 144;
 #define IDLE_OFF_TIME 60 * 2 * 1000
 #define MOTION_TIMEOUT 60 * 1 * 1000
 
-#define BLASTER_SHOTS_UNTIL_EMPTY 15  // (whatever number)
-#define BLASTER_JAM_PERCENTAGE 10     // if not defined, random.
+// #define BLASTER_SHOTS_UNTIL_EMPTY 15  // (whatever number)
+// #define BLASTER_JAM_PERCENTAGE 10     // if not defined, random.
 
 #endif
 
 #ifdef CONFIG_PROP
-#include "../props/dual_prop.h"
-#include "../props/saber.h"
-#undef PROP_TYPE
-#include "../props/blaster.h"
-#undef PROP_TYPE
-#define PROP_TYPE SaberBlasterProp<Saber, Blaster>
+#include "../props/jetpack_prop.h"
 #endif
 
 
